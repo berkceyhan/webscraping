@@ -1,5 +1,5 @@
 [project]
-name = "webscraping"
+name = "webscraping_telephone_prices"
 version = "0.1.0"
 description = ""
 authors = [
@@ -7,15 +7,18 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "requests (>=2.32.5,<3.0.0)",
-    "beautifulsoup4 (>=4.13.4,<5.0.0)",
-    "lxml (>=6.0.1,<7.0.0)",
-    "pandas (>=2.3.2,<3.0.0)"
-]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+requests = ">=2.32.5,<3.0.0"
+beautifulsoup4 = ">=4.13.4,<5.0.0"
+lxml = ">=6.0.1,<7.0.0"
+pandas = ">=2.3.2,<3.0.0"
+webscraping = ">=1.7.1,<2.0.0"  # only if this package exists
+pillow = "^11.3.0"
 
 [tool.poetry]
-packages = [{include = "webscraping", from = "src"}]
+packages = [{include = "webscraper", from = "src"}]
 
 
 [build-system]
